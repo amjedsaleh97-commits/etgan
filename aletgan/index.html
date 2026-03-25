@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة الإتقان المعتمد | استيراد المولدات وقطع الغيار - ليبيا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --main-yellow: #ffcc00; 
+            --dark-black: #1a1a1a;  
+            --bg-gray: #f9f9f9;    
+            --text-main: #333;
+            --text-light: #fff;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; scroll-behavior: smooth; }
+        body { color: var(--text-main); line-height: 1.8; background-color: #fff; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        ul { list-style: none; }
+
+        header {
+            background-color: var(--dark-black);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 4px solid var(--main-yellow);
+        }
+
+        .logo-container { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 55px; width: auto; border-radius: 4px; }
+        .company-name { color: var(--main-yellow); font-size: 1.6rem; font-weight: 800; }
+
+        nav ul { display: flex; gap: 20px; }
+        nav ul li a { color: var(--text-light); font-weight: 600; font-size: 0.95rem; }
+        nav ul li a:hover { color: var(--main-yellow); }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.40)), 
+                        url('الخلفية1.png') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-light);
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3.2rem; font-weight: 800; color: var(--main-yellow); margin-bottom: 20px; line-height: 1.2; }
+        .hero p { font-size: 1.3rem; max-width: 850px; margin-bottom: 35px; color: #ddd; }
+        .hero .btn-main { background-color: var(--main-yellow); color: var(--dark-black); padding: 15px 40px; border-radius: 50px; font-weight: 800; font-size: 1.2rem; box-shadow: 0 4px 15px rgba(255,204,0,0.3); }
+
+        .stats-bar { background: var(--dark-black); color: var(--main-yellow); display: flex; justify-content: space-around; padding: 40px 10%; text-align: center; flex-wrap: wrap; gap: 20px; border-bottom: 1px solid #333; }
+        .stat-item h4 { font-size: 2.8rem; color: #fff; margin-bottom: 5px; }
+        .stat-item p { font-size: 1rem; color: var(--main-yellow); font-weight: 600; }
+
+        section { padding: 90px 10%; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2.4rem; font-weight: 800; position: relative; padding-bottom: 15px; display: inline-block; }
+        .section-title h2::after { content: ''; width: 80px; height: 5px; background: var(--main-yellow); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .feature-box { padding: 40px; background: var(--bg-gray); border-radius: 20px; text-align: center; transition: var(--transition); border: 1px solid #eee; }
+        .feature-box:hover { transform: translateY(-10px); background: #fff; box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .feature-box i { font-size: 3.5rem; color: var(--main-yellow); margin-bottom: 25px; }
+        .feature-box h3 { font-size: 1.5rem; margin-bottom: 15px; color: var(--dark-black); }
+        .feature-box p { color: #666; font-size: 0.95rem; }
+
+        .specialty-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+        .specialty-card { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f0f0f0; }
+        .specialty-img { width: 100%; height: 280px; object-fit: cover; }
+        .specialty-info { padding: 30px; }
+        .specialty-info h3 { font-size: 1.6rem; color: var(--dark-black); margin-bottom: 15px; }
+        .specialty-list li { margin-bottom: 12px; display: flex; align-items: center; gap: 10px; font-size: 0.95rem; }
+        .specialty-list li i { color: var(--main-yellow); font-size: 1rem; }
+
+        .gallery-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
+        .gallery-item { height: 180px; border-radius: 12px; overflow: hidden; border: 2px solid transparent; transition: 0.3s; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .gallery-item:hover { border-color: var(--main-yellow); }
+        .gallery-item:hover img { transform: scale(1.1); }
+        .gallery-subtitle { grid-column: 1 / -1; background: var(--dark-black); color: var(--main-yellow); padding: 12px 25px; margin: 30px 0 15px; border-radius: 8px; font-weight: 700; font-size: 1.2rem; }
+
+        .map-box { width: 100%; height: 450px; border-radius: 20px; overflow: hidden; border: 5px solid #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+        .contact-section { background-color: var(--dark-black); color: #fff; text-align: center; }
+        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1000px; margin: 40px auto; }
+        .contact-method { background: rgba(255,255,255,0.05); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; }
+        .contact-method:hover { border-color: var(--main-yellow); background: rgba(255,204,0,0.05); }
+        .contact-method i { font-size: 3rem; color: var(--main-yellow); margin-bottom: 20px; }
+        .btn-call, .btn-wa { display: inline-block; padding: 12px 30px; border-radius: 50px; font-weight: 700; margin-top: 20px; transition: 0.3s; }
+        .btn-call { background: var(--main-yellow); color: #000; }
+        .btn-wa { background: #25d366; color: #fff; }
+
+        footer { background: #000; color: #777; padding: 30px; text-align: center; font-size: 0.9rem; border-top: 1px solid #222; }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; padding: 15px; }
+            nav ul { margin-top: 15px; gap: 10px; font-size: 0.8rem; }
+            .hero h1 { font-size: 2rem; }
+            section { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="logo.jpeg" alt="لوقو" class="logo-img">
+            <div class="company-name">الإتقان المعتمد</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#specialty">تخصصنا</a></li>
+                <li><a href="#gallery">المعرض</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>شريككم الموثوق في حلول الطاقة المتكاملة</h1>
+        <p>نحن في شركة الإتقان المعتمد نضع بين أيديكم خبرتنا الطويلة في استيراد وتوريد أفضل أنواع المولدات الكهربائية العالمية وقطع الغيار الأصلية لضمان استمرارية أعمالكم بكفاءة تامة.</p>
+        <a href="#contact" class="btn-main">اطلب استشارة فنية مجانية</a>
+    </section>
+
+    <div class="stats-bar">
+        <div class="stat-item"><h4>+12</h4><p>عاماً من الخبرة</p></div>
+        <div class="stat-item"><h4>+600</h4><p>مولد تم توريده</p></div>
+        <div class="stat-item"><h4>100%</h4><p>قطع غيار أصلية</p></div>
+        <div class="stat-item"><h4>+20</h4><p>مهندس وفني متخصص</p></div>
+    </div>
+
+    <section id="about">
+        <div class="section-title"><h2>لماذا تختار شركة الإتقان المعتمد؟</h2></div>
+        <p style="text-align: center; max-width: 800px; margin: -20px auto 40px; color: #666;">نحن لا نبيع مجرد آلات، نحن نقدم حلاً جذرياً لمشاكل انقطاع التيار الكهربائي من خلال منتجات عالمية ودعم فني لا يتوقف.</p>
+        <div class="features-grid">
+            <div class="feature-box">
+                <i class="fas fa-certificate"></i>
+                <h3>جودة معتمدة</h3>
+                <p>نحرص على استيراد المولدات التي تحمل شهادات الجودة العالمية وتخضع لاختبارات الأداء الشاقة قبل التسليم.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-tools"></i>
+                <h3>دعم ما بعد البيع</h3>
+                <p>فريقنا الفني متواجد دائماً لتقديم خدمات التركيب، التشغيل، والصيانة الدورية لضمان أطول عمر للمولد.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-box-open"></i>
+                <h3>مخزون ضخم</h3>
+                <p>نوفر كافة قطع الغيار المستهلكة والنادرة في مخازننا لضمان سرعة الإصلاح وعدم توقف أعمالكم.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="specialty" style="background-color: var(--bg-gray);">
+        <div class="section-title"><h2>تخصصاتنا الأساسية</h2></div>
+        <div class="specialty-grid">
+            <div class="specialty-card">
+                <img src="مولدات.jpeg" alt="قسم المولدات" class="specialty-img">
+                <div class="specialty-info">
+                    <h3>المولدات الكهربائية (ديزل وبنزين)</h3>
+                    <p>تشكيلة واسعة تلبي احتياجات كافة القطاعات (سكني، تجاري، صناعي) بقدرات تبدأ من 5KVA وحتى 2000KVA.</p>
+                    <ul class="specialty-list">
+                        <li><i class="fas fa-bolt"></i> محركات عالمية وأنظمة تبريد ذكية.</li>
+                        <li><i class="fas fa-check-circle"></i> كتم صوت متطور للأماكن السكنية.</li>
+                        <li><i class="fas fa-check-circle"></i> لوحات تحكم ذكية للحماية والتشغيل التلقائي.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="specialty-card">
+                <img src="قطع غيار.jpg" alt="قسم قطع الغيار" class="specialty-img">
+                <div class="specialty-info">
+                    <h3>قطع الغيار والمستهلكات الأصلية</h3>
+                    <p>نحن الموزعون الأوائل لقطع الغيار الأصلية التي تضمن أداء المولد كأنه جديد وتوفر في استهلاك الوقود.</p>
+                    <ul class="specialty-list">
+                        <li><i class="fas fa-cog"></i> فلاتر زيت، هواء، ووقود أصلية 100%.</li>
+                        <li><i class="fas fa-check-circle"></i> رؤوس توليد ولوحات طاقة متطورة.</li>
+                        <li><i class="fas fa-check-circle"></i> طواقم عمرة كاملة لجميع أنواع المحركات.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" style="background-color: #f0f0f0;">
+        <div class="section-title"><h2>معرض الصور</h2></div>
+        <div class="gallery-container">
+            <div class="gallery-subtitle">أقوى المولدات المتوفرة بالمخازن</div>
+            <div class="gallery-item"><img src="مولد1.jpeg"></div>
+            <div class="gallery-item"><img src="مولد2.jpeg"></div>
+            <div class="gallery-item"><img src="مولد3.jpeg"></div>
+            <div class="gallery-item"><img src="مولد4.jpeg"></div>
+            <div class="gallery-item"><img src="مولد5.jpeg"></div>
+            <div class="gallery-item"><img src="مولد6.jpeg"></div>
+            <div class="gallery-item"><img src="مولد7.jpeg"></div>
+            <div class="gallery-item"><img src="مولد8.jpeg"></div>
+            <div class="gallery-item"><img src="مولد9.jpeg"></div>
+            <div class="gallery-item"><img src="مولد10.jpeg"></div>
+            <div class="gallery-item"><img src="مولد11.jpeg"></div>
+            <div class="gallery-item"><img src="مولد12.jpeg"></div>
+        </div>
+    </section>
+
+    <section id="location">
+        <div class="section-title"><h2>موقعنا على الخريطة</h2></div>
+        <div class="map-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3372.11585642533!2d15.0862222!3d32.30825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzLCIDE4JyAyOS43IiBOIDE1wrAgMDUnIDEwLjQiIEU!5e0!3m2!1sar!2sly!4v1711364500000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <p style="text-align: center; margin-top: 20px; font-weight: 600;"><i class="fas fa-map-marker-alt" style="color: var(--main-yellow);"></i> مصراتة - ليبيا</p>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="section-title"><h2 style="color:#fff">تواصل معنا اليوم</h2></div>
+        <div class="contact-grid">
+            <div class="contact-method">
+                <i class="fas fa-phone-alt"></i>
+                <h3>الطلب والاستفسار</h3>
+                <p>0943444140</p>
+                <a href="tel:00218943444140" class="btn-call">اتصل الآن</a>
+            </div>
+            <div class="contact-method">
+                <i class="fab fa-whatsapp"></i>
+                <h3>دعم واتساب مباشر</h3>
+                <p>0913444140</p>
+                <a href="https://wa.me/218913444140" class="btn-wa">ابدأ المحادثة</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 شركة الإتقان المعتمد لاستيراد المولدات وقطع الغيار</p>
+    </footer>
+
+</body>
+</html>
